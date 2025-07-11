@@ -25,11 +25,10 @@ public class Optimal {
         return missingNumber - s;
     }
     public static int method2(int[] nums) {
-        int res = 0;
+        int res = nums.length;
         for(int i = 0;i<nums.length;i++){
             res ^= i ^ nums[i];
         }
-        res ^= nums.length;
         return res;
     }
 }
